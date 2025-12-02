@@ -10,6 +10,7 @@
 
 ## 🖼️ תצוגה מקדימה (Preview)
 *(כאן כדאי להוסיף צילום מסך של ה-Swagger UI או של ה-Dashboard העתידי)*
+
 ## 🚀 פיצ'רים מרכזיים
 * **בדיקת קישוריות (Ping):** בדיקת זמינות שרתים וזמני תגובה (RTT) בזמן אמת.
 * **סריקת פורטים:** בדיקה האם פורט TCP מסוים פתוח בשרת מרוחק.
@@ -28,6 +29,5 @@
 
 ### 1. שכפול המאגר (Clone)
 ```bash
-git clone [https://github.com/stavmay5/Network_Status_Dashboard.git](https://github.com/stavmay5/Network_Status_Dashboard.git)
+git clone https://github.com/stavmay5/Network_Status_Dashboard.git
 cd Network_Status_Dashboard
-
