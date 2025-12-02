@@ -31,7 +31,7 @@
 ```bash
 git clone https://github.com/stavmay5/Network_Status_Dashboard.git
 cd Network_Status_Dashboard
-
+```
 2. יצירת סביבה וירטואלית (מומלץ)
 Windows:
 
@@ -60,3 +60,4 @@ Bash
 
 uvicorn main:app --reload
 השרת ירוץ בכתובת: http://127.0.0.1:8000
+
