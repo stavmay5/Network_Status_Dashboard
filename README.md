@@ -31,3 +31,32 @@
 ```bash
 git clone https://github.com/stavmay5/Network_Status_Dashboard.git
 cd Network_Status_Dashboard
+
+2. יצירת סביבה וירטואלית (מומלץ)
+Windows:
+
+Bash
+
+python -m venv venv
+venv\Scripts\activate
+Mac/Linux:
+
+Bash
+
+python3 -m venv venv
+source venv/bin/activate
+3. הגדרות סביבה (.env)
+יש ליצור קובץ בשם .env בתיקייה הראשית ולהגדיר בו את המיקום (אופציונלי):
+
+Plaintext
+
+PROJECT_LOCATION=Jaffa, Tel Aviv
+4. התקנת תלויות
+Bash
+
+pip install -r requirements.txt
+5. הרצת השרת
+Bash
+
+uvicorn main:app --reload
+השרת ירוץ בכתובת: http://127.0.0.1:8000
