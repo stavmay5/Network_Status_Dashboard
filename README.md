@@ -28,5 +28,6 @@
 
 ### 1. שכפול המאגר (Clone)
 ```bash
-git clone [https://github.com/YOUR_USERNAME/Network_Status_Dashboard.git](https://github.com/YOUR_USERNAME/Network_Status_Dashboard.git)
+git clone [https://github.com/stavmay5/Network_Status_Dashboard.git](https://github.com/stavmay5/Network_Status_Dashboard.git)
 cd Network_Status_Dashboard
+
