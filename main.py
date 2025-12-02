@@ -1,11 +1,22 @@
 from fastapi import FastAPI
 import socket
+from fastapi.middleware.cors import CORSMiddleware
+import os
 
 from ping3 import ping, verbose_ping
 from typing import Optional # נוסיף את זה כדי לציין שערך יכול להיות גם None
 
 # יצירת מופע (אובייקט) של FastAPI
 app = FastAPI()
+
+# הגדרת אישור גישה מכל מקום (לפיתוח)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # מאפשר גישה מכל דומיין. בייצור כדאי להגביל לכתובת האתר שלך
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def get_ping_details(hostname: str) -> dict:
     """
@@ -36,7 +47,9 @@ async def read_root():
 # נתיב נוסף לבדיקה
 @app.get("/test")
 async def test_endpoint():
-    return {"status": "Test successful", "project_location": "Rishon LeTsiyon"}
+    # לוקח את המיקום ממשתנה סביבה, ואם לא קיים - משתמש בברירת מחדל
+    location = os.getenv("PROJECT_LOCATION", "Unknown Location")
+    return {"status": "Test successful", "project_location": location}
 
 @app.get("/ping/{hostname}")
 async def ping_specific_host(hostname: str):
@@ -69,5 +82,6 @@ def check_port_status(hostname: str, port: int) -> dict:
         status = "connection_error"
     finally:
         sock.close() # חשוב לסגור את הסוקט
+
 
     return {"host": hostname, "port": port, "status": status}
