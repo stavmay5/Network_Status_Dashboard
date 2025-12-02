@@ -47,10 +47,11 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 ### 3. הגדרות סביבה (env.)
-יש ליצור קובץ בשם .env בתיקייה הראשית ולהגדיר בו את המיקום (אופציונלי):
+יש ליצור קובץ בשם env. בתיקייה הראשית ולהגדיר בו את המיקום (אופציונלי):
 
-Plaintext
+```Plaintext
 PROJECT_LOCATION=Jaffa, Tel Aviv
+```
 ### 4. התקנת תלויות
 ```bash
 pip install -r requirements.txt
@@ -61,5 +62,6 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 השרת ירוץ בכתובת: http://127.0.0.1:8000
+
 
 
